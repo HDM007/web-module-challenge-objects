@@ -28,8 +28,9 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
-
-
+console.log('snax', 7, 'theater markup')
+console.log('cocoa', 12, 'household')
+console.log('pancake', 2, 'breakfast')
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to the 
@@ -49,6 +50,15 @@ export const burger = {
   price: 18, 
   category: "Lunch", 
   /*Your code here*/
+  discount: function(string){
+    if (string === "teacher" || "student") {
+      return this.price * 0.75;
+    } else if (string === "public"){
+      return this.price * 0.9;
+    } else {
+      return "No value provided";
+    }
+  }
 }
 
 
